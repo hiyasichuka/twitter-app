@@ -1,0 +1,56 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "clic-timeline-frontend-container",
+      "image": "478610495555.dkr.ecr.ap-northeast-1.amazonaws.com/clic-timeline-frontend",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "containerPort": 443,
+          "hostPort": 443,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "entryPoint": [],
+      "command": [],
+      "environment": [],
+      "mountPoints": [],
+      "volumesFrom": []
+    }
+  ],
+  "family": "clic-timeline-frontend-task-definition",
+  "taskRoleArn": "arn:aws:iam::478610495555:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::478610495555:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": ["EC2", "FARGATE"],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "tags": [
+    {
+      "key": "Name",
+      "value": "clic-timeline-frontend-task-definition"
+    }
+  ]
+}
